@@ -12,7 +12,7 @@ const LoginPage = async () => {
   }
   return (
     <div className="max-w-4xl mx-auto flex flex-col gap-4 items-center justify-center">
-      <h1 className="text-3xl text-gray-800 font-semibold mb-4">
+      <h1 className="text-2xl md:text-3xl text-gray-800 font-semibold mb-2 md:mb-4 text-center">
         <span className="text-indigo-800 font-bold"> Login!</span>
       </h1>
       <LoginForm />

@@ -7,17 +7,24 @@ import { registerUser } from "@/actions/registerUserAction";
 const RegisterForm = () => {
   const [formState, formAction] = useFormState(registerUser, {});
 
-
   return (
-    <form action={formAction} className="flex flex-col gap-4 w-[420px]">
+    <form
+      action={formAction}
+      className="flex flex-col gap-4  w-full sm:w-[420px] px-4"
+    >
       <div className="flex flex-col gap-2">
-        <label htmlFor="username">Username:</label>
+        <label
+          htmlFor="username"
+          className="text-sm md:text-base font-semibold"
+        >
+          Username:
+        </label>
         <input
           type="text"
           placeholder="john99"
           name="username"
           id="username"
-          className="border border-indigo-600 rounded-md py-2 px-4"
+          className="border border-indigo-600 rounded-md py-2 px-4 "
         />
         {formState?.errors?.username?.map((error) => (
           <p key={error} className="text-red-500 font-bold text-xs">
@@ -26,7 +33,9 @@ const RegisterForm = () => {
         ))}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email" className="text-sm md:text-base font-semibold">
+          Email:
+        </label>
         <input
           type="text"
           placeholder="john.doe@gmail.com"
@@ -41,7 +50,12 @@ const RegisterForm = () => {
         )}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="password">Password:</label>
+        <label
+          htmlFor="password"
+          className="text-sm md:text-base font-semibold"
+        >
+          Password:
+        </label>
         <input
           type="password"
           placeholder="somePassword12$%"

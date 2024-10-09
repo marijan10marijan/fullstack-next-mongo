@@ -7,10 +7,11 @@ import { loginUser } from "@/actions/loginUserAction";
 const LoginForm = () => {
   const [formState, formAction] = useFormState(loginUser, {});
 
-  console.log(formState);
-
   return (
-    <form action={formAction} className="flex flex-col gap-4 w-[420px]">
+    <form
+      action={formAction}
+      className="flex flex-col gap-4 w-full sm:w-[420px] px-4"
+    >
       <div className="flex flex-col gap-2">
         <label htmlFor="email">Email:</label>
         <input
@@ -31,6 +32,9 @@ const LoginForm = () => {
           className="border border-indigo-600 rounded-md py-2 px-4"
         />
       </div>
+      {formState?.errors && (
+        <p className="text-red-500 font-bold text-xs">{formState?.errors}</p>
+      )}
       <LoginButton />
     </form>
   );

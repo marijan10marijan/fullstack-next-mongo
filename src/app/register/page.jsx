@@ -14,7 +14,7 @@ const RegisterPage = async () => {
 
   return (
     <div className="max-w-4xl mx-auto flex flex-col gap-4 items-center justify-center">
-      <h1 className="text-3xl text-gray-800 font-semibold mb-4">
+      <h1 className="text-xl md:text-3xl text-gray-800 font-semibold mb-2 md:mb-4 text-center px-4">
         Don't have an account?
         <span className="text-indigo-800 font-bold"> Register!</span>
       </h1>

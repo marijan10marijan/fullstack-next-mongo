@@ -35,9 +35,9 @@ export const registerUser = async (prevState, formData) => {
     password: formData.get("password"),
   });
 
-  if (typeof user.username != "string") user.username = "";
-  if (typeof user.email != "string") user.email = "";
-  if (typeof user.password != "string") user.password = "";
+  if (typeof user.data.username != "string") user.data.username = "";
+  if (typeof user.data.email != "string") user.data.email = "";
+  if (typeof user.data.password != "string") user.data.password = "";
 
   if (!user.success) {
     return {
