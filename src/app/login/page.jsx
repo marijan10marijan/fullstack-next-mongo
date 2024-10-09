@@ -11,7 +11,7 @@ const LoginPage = async () => {
     return redirect("/");
   }
   return (
-    <div className="max-w-4xl mx-auto flex flex-col gap-4 items-center justify-center">
+    <div className="max-w-4xl mx-auto flex flex-col gap-4 items-center justify-center px-4">
       <h1 className="text-2xl md:text-3xl text-gray-800 font-semibold mb-2 md:mb-4 text-center">
         Already have an account?
         <span className="text-indigo-800 font-bold"> Login!</span>
